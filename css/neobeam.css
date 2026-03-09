@@ -1,8 +1,8 @@
 /*!
- * Neobeam - A modern take on LaTeX beamer | Default
+ * Neobeam - A modern take on LaTeX beamer | University of Manchester colours
  *
  * @theme neobeam
- * @author Embracket / mikael-ros
+ * @author Embracket / mikael-ros, modified by David Wood
  *
  * @auto-scaling true
  * @size 16:9 1920px 1080px
@@ -120,6 +120,30 @@ section {
 
     padding: var(--margin);
 }
+
+/************/
+/* Split layout */
+/************/
+.columns2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.columns3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.columns4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
 
 /*-----------------------------------------------------------*/
 /*********************/
@@ -344,7 +368,7 @@ blockquote, pre, table {
     --radius: var(--border-radius-default);
     min-width: 40%;
     width: fit-content;
-    max-width: 60%;
+    max-width: 190%;
 
     padding: var(--text-padding);
     margin: calc(.75*var(--text-padding)) 0;
@@ -462,7 +486,7 @@ table tr:nth-of-type(2n-1){
 img {
     display: block;
     width: fit-content;
-    max-width: 50%;
+    max-width: 90%;
     margin: var(--text-padding) 0;
 
     border-radius: var(--border-radius-default);
